@@ -30,7 +30,14 @@
   "homepage": "https://github.com/belsrc/vue-test-functional-wrapper#readme",
   "author": "bryan@bryanckizer.com",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "unit testing",
+    "testing",
+    "test",
+    "functional component",
+    "component"
+  ],
   "devDependencies": {
     "@babel/core": "7.4.5",
     "@babel/preset-env": "7.4.5",
