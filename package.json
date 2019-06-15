@@ -1,5 +1,8 @@
 {
   "name": "@belsrc/vue-test-functional-wrapper",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "description": "Wrap a functional component in order to test against it",
   "main": "index.js",
@@ -12,7 +15,7 @@
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
     "np": "npx np",
-    "pub": "npm-run-all test clean np"
+    "pub": "npm-run-all clean np"
   },
   "jest": {
     "testPathIgnorePatterns": [
