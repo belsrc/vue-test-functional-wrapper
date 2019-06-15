@@ -14,8 +14,7 @@
     "prettier": "npx prettier --config .prettierrc.js --write \"index.js\"",
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
-    "np": "npx np",
-    "pub": "npm-run-all clean np"
+    "release": "npx np"
   },
   "jest": {
     "testPathIgnorePatterns": [
