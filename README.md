@@ -14,13 +14,14 @@ npm i -D @belsrc/vue-test-functional-wrapper
 ## Use
 
 ```js
-// component.test.js
+// functional-component.test.js
+import FunctionalComponent from './functional-component';
 
 let wrapped;
 
-describe('Component', () => {
+describe('FunctionalComponent', () => {
   beforeEach(() => {
-    wrapped = wrapFunctional(Component, {
+    wrapped = wrapFunctional(FunctionalComponent, {
       methods: { click() { this.$emit('click'); } },
       on(vm) { return { click: vm.click } },
     });
