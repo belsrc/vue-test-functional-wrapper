@@ -14,9 +14,10 @@
     "prettier": "npx prettier --config .prettierrc.js --write \"index.js\"",
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
-    "coverage": "jest --verbose --coverage && codecov -t f3e4d4b5-4577-447e-8eea-8771c16e16f9"
+    "coverage": "jest --verbose --coverage && codecov"
   },
   "jest": {
+    "coverageDirectory": "coverage",
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],
@@ -46,6 +47,7 @@
     "@babel/register": "7.4.4",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "10.0.1",
+    "codecov": "3.5.0",
     "eslint": "5.16.0",
     "eslint-config-belsrc": "1.0.1",
     "jest": "24.8.0",
