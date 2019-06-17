@@ -1,6 +1,6 @@
 import '@babel/register';
 import { mount } from '@vue/test-utils';
-import FuncComp from './__mocks__/func-comp';
+import FuncComp from './../__mocks__/func-comp';
 import wrapFunctional from '.';
 
 const COMP_TITLE = 'Unit Test Title';
@@ -13,8 +13,14 @@ describe('Functional Wrapper', () => {
     jest.resetModules();
     jest.clearAllMocks();
     wrapped = wrapFunctional(FuncComp, {
-      methods: { click() { this.$emit('click'); } },
-      on(vm) { return { click: vm.click } },
+      methods: {
+        click() {
+          this.$emit('click');
+        },
+      },
+      on(vm) {
+        return { click: vm.click };
+      },
     });
   });
 

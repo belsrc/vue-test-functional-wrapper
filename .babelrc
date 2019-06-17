@@ -4,9 +4,14 @@
       "@babel/preset-env",
       {
         "targets": {
-          "ie": "11"
-        }
+          "node": "10.13"
+        },
+        "modules": false
       }
     ]
   ],
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs",
+    "annotate-pure-calls"
+  ]
 }

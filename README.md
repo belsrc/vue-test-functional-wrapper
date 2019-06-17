@@ -19,6 +19,7 @@ npm i -D @belsrc/vue-test-functional-wrapper
 
 ```js
 // functional-component.test.js
+import wrapFunctional from '@belsrc/vue-test-functional-wrapper';
 import FunctionalComponent from './functional-component';
 
 let wrapped;
@@ -32,7 +33,7 @@ describe('FunctionalComponent', () => {
   });
 
   describe('Rendering', () => {
-    test('comthing', () => {
+    test('should do somthing', () => {
       const wrapper = mount(wrapped, {
         propsData: { foo: 'bar' },
       });
