@@ -10,7 +10,6 @@
     "dist"
   ],
   "scripts": {
-    "check": "npm-check -u",
     "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"**/*.{js,jsx,ts,tsx}\"",
     "prettier": "npx prettier --config .prettierrc.js --write \"**/*.{js,jsx,ts,tsx,md,html}\"",
     "clean": "npm-run-all prettier lint",
@@ -69,7 +68,6 @@
     "eslint": "6.5.1",
     "eslint-config-belsrc": "1.1.0",
     "jest": "24.9.0",
-    "npm-check": "5.9.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
     "release-it": "12.4.3",
