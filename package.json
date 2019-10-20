@@ -1,41 +1,33 @@
 {
   "name": "@belsrc/vue-test-functional-wrapper",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "1.0.1",
   "description": "Wrap a functional component in order to test against it",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -E GIT_PARAMS",
+    "pre-commit": "lint-staged"
+  },
   "scripts": {
     "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"**/*.{js,jsx,ts,tsx}\"",
     "prettier": "npx prettier --config .prettierrc.js --write \"**/*.{js,jsx,ts,tsx,md,html}\"",
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
     "coverage": "jest --verbose --coverage",
-    "build": "npx babel src --out-dir dist --ignore **/*.test.js",
-    "release": "npx release-it",
-    "pub": "npm-run-all build release"
+    "build": "npx babel src --out-dir dist --ignore **/*.test.js"
   },
   "jest": {
     "coverageDirectory": "coverage",
     "testPathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/dist"
     ],
     "testEnvironment": "jsdom"
-  },
-  "release-it": {
-    "git": {
-      "requireUpstream": false,
-      "addUntrackedFiles": false,
-      "requireCleanWorkingDir": true,
-      "changelog": "git log --pretty=format:\"* %s (%h)\" ${latestTag}...HEAD",
-      "commitMessage": "chore(build): release ${version}",
-      "tagName": "v${version}",
-      "tagAnnotation": "Release v${version}"
-    }
   },
   "repository": {
     "type": "git",
@@ -61,17 +53,21 @@
     "@babel/plugin-transform-modules-commonjs": "7.6.0",
     "@babel/preset-env": "7.6.3",
     "@babel/register": "7.6.2",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "10.0.3",
     "babel-plugin-annotate-pure-calls": "0.4.0",
     "codecov": "3.6.1",
+    "cross-env": "6.0.3",
     "eslint": "6.5.1",
     "eslint-config-belsrc": "1.1.0",
     "jest": "24.9.0",
+    "lint-staged": "9.4.2",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
-    "release-it": "12.4.3",
     "vue": "2.6.10",
-    "vue-template-compiler": "2.6.10"
+    "vue-template-compiler": "2.6.10",
+    "yorkie": "2.0.0"
   }
 }
