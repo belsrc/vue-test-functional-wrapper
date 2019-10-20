@@ -1,6 +1,6 @@
 import '@babel/register';
 import { mount } from '@vue/test-utils';
-import FuncComp from './__mocks__/func-comp';
+import FuncComp from './../__mocks__/func-comp';
 import wrapFunctional from '.';
 
 const COMP_TITLE = 'Unit Test Title';
