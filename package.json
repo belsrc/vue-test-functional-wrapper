@@ -10,11 +10,11 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"index.js\"",
-    "prettier": "npx prettier --config .prettierrc.js --write \"index.js\"",
+    "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"**/*.{js,jsx,ts,tsx}\"",
+    "prettier": "npx prettier --config .prettierrc.js --write \"**/*.{js,jsx,ts,tsx,md,html}\"",
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
-    "coverage": "jest --verbose --coverage && codecov"
+    "coverage": "jest --verbose --coverage"
   },
   "jest": {
     "coverageDirectory": "coverage",
