@@ -13,8 +13,14 @@ describe('Functional Wrapper', () => {
     jest.resetModules();
     jest.clearAllMocks();
     wrapped = wrapFunctional(FuncComp, {
-      methods: { click() { this.$emit('click'); } },
-      on(vm) { return { click: vm.click } },
+      methods: {
+        click() {
+          this.$emit('click');
+        },
+      },
+      on(vm) {
+        return { click: vm.click };
+      },
     });
   });
 
