@@ -19,7 +19,8 @@
     "clean": "npm-run-all prettier lint",
     "test": "jest --verbose",
     "coverage": "jest --verbose --coverage",
-    "build": "npx babel src --out-dir dist --ignore **/*.test.js"
+    "build": "npx babel src --out-dir dist --ignore **/*.test.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "jest": {
     "coverageDirectory": "coverage",
@@ -59,6 +60,7 @@
     "babel-eslint": "10.0.3",
     "babel-plugin-annotate-pure-calls": "0.4.0",
     "codecov": "3.6.1",
+    "conventional-changelog-cli": "2.0.25",
     "cross-env": "6.0.3",
     "eslint": "6.5.1",
     "eslint-config-belsrc": "1.1.0",
